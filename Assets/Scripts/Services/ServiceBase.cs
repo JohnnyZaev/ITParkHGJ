@@ -6,21 +6,19 @@ namespace Services
     {
         private static bool _destroyed;
         private static T _instance;
-        protected bool awaken;
+        private bool _awaken;
  
-        //---------------------------------------------------
         public static T Instance {
-            get	{ return _instance != null || _destroyed ? _instance : Load(); }
-            set { _instance = value; }
+            get => _instance != null || _destroyed ? _instance : Load();
+            set => _instance = value;
         }
  
-        //---------------------------------------------------
+        // services can be initiated from one source
         public static void Init() {
             if ( _instance == null )
                 Load();
         }
 	
-        //---------------------------------------------------
         private static T Load() {
             var inst = (T)FindObjectOfType(typeof(T));
             if ( inst == null ) {
@@ -32,16 +30,15 @@ namespace Services
             return inst;
         }
  	
-        //---------------------------------------------------
         public virtual void Awake()
         {
-            if (awaken)
+            if (_awaken)
                 return;
 
-            awaken = true;
+            _awaken = true;
  
             if ( _instance != null && _instance != this ) {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
                 return;
             }
  
