@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9af23ba5fa5364ff598888460e0e2759, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571337, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.0032013855, g: 0.0063153747, b: 0.014413998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 924457014643251371, guid: 995d0ccc925ec4a8e9ac38fa5e7daefd,
         type: 3}
+      propertyPath: MoveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 924457014643251371, guid: 995d0ccc925ec4a8e9ac38fa5e7daefd,
+        type: 3}
       propertyPath: MouseSensitivity
       value: 5
       objectReference: {fileID: 0}
@@ -196,6 +201,29 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 995d0ccc925ec4a8e9ac38fa5e7daefd, type: 3}
+--- !u!1 &533804997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8929119298664232067, guid: 50585a15648bb42a983a3485e56c3595,
+    type: 3}
+  m_PrefabInstance: {fileID: 1349108635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &533805000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533804997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 0}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1001 &605806106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -619,7 +647,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8929119298664232067, guid: 50585a15648bb42a983a3485e56c3595,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 533805000}
   m_SourcePrefab: {fileID: 100100000, guid: 50585a15648bb42a983a3485e56c3595, type: 3}
 --- !u!4 &1448203999 stripped
 Transform:
@@ -758,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6388309709250708996, guid: 669e220e33e17fb48b53b1e5327a158d,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f891654a40ed4b84908d8bfbaddca44, type: 3}
     - target: {fileID: 6474180292393802618, guid: 669e220e33e17fb48b53b1e5327a158d,
         type: 3}
       propertyPath: m_LocalPosition.x
